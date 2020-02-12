@@ -3,6 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
+                "/home/cabantous/Arduino/libraries/Adafruit_Unified_Sensor",
                 "/home/cabantous/Arduino/libraries/Adafruit_BME280_Library",
                 "/home/cabantous/Arduino/libraries/ESP8266_Influxdb/src",
                 "/home/cabantous/.arduino15/packages/esp8266/tools/**",
