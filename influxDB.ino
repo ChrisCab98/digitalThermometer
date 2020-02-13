@@ -1,18 +1,32 @@
+#include <Adafruit_SSD1306.h>
+#include <splash.h>
+
+#include <Adafruit_GFX.h>
+#include <Adafruit_SPITFT_Macros.h>
+#include <Adafruit_SPITFT.h>
+#include <gfxfont.h>
+
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
+
+#include "Wire.h"
+
 #include <InfluxDbClient.h>
+
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 
-#include "Wire.h"
-
-char *ssid = "cabantous";    //WiFi AP Name
+char *ssid = "cabantous"; //WiFi AP Name
 char *password = "B6krJhuZ"; //WiFi Password
+
+// char *ssid = "TP-Link_1526"; //WiFi AP Name
+// char *password = "00102698"; //WiFi Password
 
 #define DEVICE "ESP8266"
 
-#define INFLUXDB_URL "http://192.168.68.164:8086"
+#define INFLUXDB_URL "http://192.168.68.143:8086" // DVB
+// #define INFLUXDB_URL "http://192.168.1.25:8086" // Home
 #define INFLUXDB_DB_NAME "HomeKit"
 #define INFLUXDB_USER "Chris"
 #define INFLUXDB_PASSWORD "5ZG2fs"
@@ -20,7 +34,10 @@ char *password = "B6krJhuZ"; //WiFi Password
 InfluxDBClient client(INFLUXDB_URL, INFLUXDB_DB_NAME);
 Point sensor("wifi_status");
 Point BME280_1("Temperature");
+
 Adafruit_BME280 capteur;
+
+Adafruit_SSD1306 display(-1);
 
 void setup()
 {
@@ -45,6 +62,21 @@ void setup()
   Serial.println("Starting BME280... ");
   delay(10); // attente de la mise en route du capteur. 2 ms minimum
   capteur.begin(0x76);
+
+  // initialize with the I2C addr 0x3C
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+
+  // Clear the buffer.
+  display.clearDisplay();
+
+  // Display Text
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 14);
+  display.println("Hello world!");
+  display.display();
+  delay(2000);
+  display.clearDisplay();
 }
 
 void loop()
