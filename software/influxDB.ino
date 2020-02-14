@@ -17,16 +17,16 @@
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 
-char *ssid = "cabantous"; //WiFi AP Name
-char *password = "B6krJhuZ"; //WiFi Password
+// char *ssid = "cabantous"; //WiFi AP Name
+// char *password = "B6krJhuZ"; //WiFi Password
 
-// char *ssid = "TP-Link_1526"; //WiFi AP Name
-// char *password = "00102698"; //WiFi Password
+char *ssid = "TP-Link_1526"; //WiFi AP Name
+char *password = "00102698"; //WiFi Password
 
 #define DEVICE "ESP8266"
 
-#define INFLUXDB_URL "http://192.168.68.143:8086" // DVB
-// #define INFLUXDB_URL "http://192.168.1.25:8086" // Home
+// #define INFLUXDB_URL "http://192.168.68.143:8086" // DVB
+#define INFLUXDB_URL "http://192.168.1.25:8086" // Home
 #define INFLUXDB_DB_NAME "HomeKit"
 #define INFLUXDB_USER "Chris"
 #define INFLUXDB_PASSWORD "5ZG2fs"
@@ -42,6 +42,21 @@ Adafruit_SSD1306 display(-1);
 void setup()
 {
   Serial.begin(115200);
+
+  // initialize with the I2C addr 0x3C
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+
+  // Clear the buffer.
+  display.clearDisplay();
+
+  // Display Text
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 14);
+  display.println("Connecting to WiFi ...");
+  display.display();
+  delay(2000);
+  display.clearDisplay();
 
   WiFi.begin(ssid, password);
 
@@ -61,11 +76,8 @@ void setup()
 
   Serial.println("Starting BME280... ");
   delay(10); // attente de la mise en route du capteur. 2 ms minimum
+
   capteur.begin(0x76);
-
-  // initialize with the I2C addr 0x3C
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-
   // Clear the buffer.
   display.clearDisplay();
 
@@ -73,7 +85,7 @@ void setup()
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0, 14);
-  display.println("Hello world!");
+  display.println("Connected !");
   display.display();
   delay(2000);
   display.clearDisplay();
@@ -123,7 +135,15 @@ void loop()
     Serial.println(client.getLastErrorMessage());
   }
 
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(32, 14);
+  display.println(capteur.readTemperature());
+  display.display();
   // Wait 1s
   Serial.println("Wait 1s");
   delay(1000);
+  display.clearDisplay();
+
+  // ESP.deepSleepInstant(5000*1000);
 }
