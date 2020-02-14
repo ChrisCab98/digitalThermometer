@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "LPS3015"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "LPS3015")
+        (spec "default")
+    )
+)

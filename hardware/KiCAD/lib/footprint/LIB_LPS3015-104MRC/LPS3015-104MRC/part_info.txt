@@ -1,0 +1,9 @@
+Manufacturer=COILCRAFT
+PartNumber=LPS3015-104MRC
+PartCategory=Inductor
+PackageCategory=Other
+PinCount=2
+Version=1.1
+Released=2019-07-11 21:52:29
+Downloaded=2020-02-14 20:40:42
+3D=N

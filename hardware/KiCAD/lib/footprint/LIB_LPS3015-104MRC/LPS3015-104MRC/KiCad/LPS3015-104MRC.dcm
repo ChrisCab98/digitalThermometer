@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LPS3015-104MRC
+D Fixed Inductors LPS3015 AEC-Q200 100uH 0.26A 20% SMD
+K
+F https://www.coilcraft.com/misc/lps3015d.html
+$ENDCMP
+#
+#End Doc Library

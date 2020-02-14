@@ -1,0 +1,67 @@
+(Japanese_coding: sjis)
+(function "ECS_717038"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-07-11-21:52:29)
+    (utime 2019-07-12-06:46:11)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "LPS3015-104MRC")
+)
+
+
+(pinAssign "ECS_717038"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-07-11-21:52:29)
+    (utime 2019-07-12-06:46:11)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_717038")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "LPS3015-104MRC")
+)
+
+
+(part "LPS3015-104MRC"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-07-11-21:52:29)
+    (utime 2019-07-12-06:46:11)
+    (packageRef "LPS3015-104MRC")
+    (pinAssignRef "ECS_717038")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "L")
+    (property "description" "Fixed Inductors LPS3015 AEC-Q200 100uH 0.26A 20% SMD")
+    (property "Manufacturer_Name" "COILCRAFT")
+    (property "Manufacturer_Part_Number" "LPS3015-104MRC")
+    (property "Mouser_Part_Number" "994-LPS3015-104MRC")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=994-LPS3015-104MRC")
+    (property "RS_Part_Number" "")
+    (property "RS_Price/Stock" "")
+    (property "Datasheet_Link" "https://www.coilcraft.com/misc/lps3015d.html")
+)
+
+

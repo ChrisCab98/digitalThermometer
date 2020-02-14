@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'LPS3015_104MRC'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "RS_PART_NUMBER", "RS_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "COILCRAFT", "LPS3015-104MRC" (!) = "", "LPS3015", "Other", "994-LPS3015-104MRC", "https://www.mouser.com/Search/Refine.aspx?Keyword=994-LPS3015-104MRC", "", "", "Fixed Inductors LPS3015 AEC-Q200 100uH 0.26A 20% SMD", "https://www.coilcraft.com/misc/lps3015d.html"
+END_PART
+
+END.
