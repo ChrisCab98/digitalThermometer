@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/chris/Documents/homekit/digitalThermometer/hardware/KiCAD/HK-DT.sch)
-    (date "Fri 14 Feb 2020 09:41:33 PM CET")
+    (date "Tue 03 Mar 2020 01:43:18 PM CET")
     (tool "Eeschema 5.1.5-52549c5~84~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -31,7 +31,7 @@
       (tstamp 5E41CB66))
     (comp (ref J1)
       (value USB_B_Micro)
-      (footprint Connector_USB:USB_Micro-B_Molex_47346-0001)
+      (footprint HK-DT:MOLEX_105164-0001)
       (datasheet ~)
       (libsource (lib Connector) (part USB_B_Micro) (description "USB Micro Type B connector"))
       (sheetpath (names /) (tstamps /))
@@ -476,7 +476,7 @@
       (datasheet http://www.farnell.com/datasheets/2050374.pdf?_ga=2.106835719.526238941.1497949497-421346633.1483631847)
       (fields
         (field (name Field4) IHLP2020BZER4R7M01)
-        (field (name Field5) 5A)
+        (field (name Field5) 1A)
         (field (name Field6) COIL)
         (field (name Field7) 4.7µH))
       (libsource (lib DVB_L) (part L_0004) (description "DVB_Inductors:L_2020-Vishay, IHLP2020BZER4R7M01, 5A, COIL, 4.7µH"))

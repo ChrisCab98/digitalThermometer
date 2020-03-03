@@ -1,0 +1,102 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "2462"
+   (description "KEYSTONE - 2462 - BATTERY HOLDER")
+   (family "ANA")
+   (package "2462")
+   (attribute "Datasheet Link" "http://www.keyelco.com/product-pdf.cfm?p=1027")
+   (attribute "Manufacturer_Name" "Keystone Electronics")
+   (attribute "Manufacturer_Part_Number" "2462")
+   (attribute "Mouser Part Number" "534-2462")
+   (attribute "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=534-2462")
+   (attribute "RS Part Number" "2508837642")
+   (attribute "RS Price/Stock" "http://uk.rs-online.com/web/p/products/2508837642")
+   (attribute "Allied_Number" "70182748")
+   (attribute "Allied Price/Stock" "https://www.alliedelec.com/keystone-electronics-2462/70182748/")
+   (gate
+    (symbol "2462")
+    (pin "+" 1 PS)
+    (pin "-" 2 PS)
+   )
+  )
+  (symbol "2462"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -100) (pt 200 -100) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "2462"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -29.755 16.46)
+      (pt 29.755 16.46)
+      (pt 29.755 -16.46)
+      (pt -29.755 -16.46)
+      (pt -29.755 16.46))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -29.755 -16.46)
+      (pt -29.755 16.46)
+      (pt 29.755 16.46)
+      (pt 29.755 -16.46)
+      (pt -29.755 -16.46))))
+   (leg 1 (pt 13.59 -7.495) (padstack 0))
+   (leg 2 (pt 13.59 7.495) (padstack 0))
+   (leg 3 (pt -13.59 7.495) (padstack 3))
+   (leg 4 (pt -13.59 -7.495) (padstack 4))
+   (padstack 0
+    (hole 1.02)
+    (plated true)
+    (pad (layer TCOP) (round 1.6))
+    (pad (layer INNER) (round 1.6))
+    (pad (layer BCOP) (round 1.6))
+   )
+   (padstack 4
+    (hole 3.3)
+    (plated true)
+    (pad (layer TCOP) (round 5))
+    (pad (layer INNER) (round 5))
+    (pad (layer BCOP) (round 5))
+   )
+   (padstack 3
+    (hole 3.3)
+    (plated true)
+    (pad (layer TCOP) (round 5))
+    (pad (layer INNER) (round 5))
+    (pad (layer BCOP) (round 5))
+   )
+  )
+ )
+)

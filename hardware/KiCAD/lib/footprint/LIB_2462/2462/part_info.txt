@@ -1,0 +1,9 @@
+Manufacturer=Keystone Electronics
+PartNumber=2462
+PartCategory=Undefined or Miscellaneous
+PackageCategory=Other
+PinCount=2
+Version=1.1
+Released=2017-10-21 12:58:16
+Downloaded=2020-03-03 13:21:11
+3D=N
