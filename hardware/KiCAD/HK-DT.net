@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/chris/Documents/homekit/digitalThermometer/hardware/KiCAD/HK-DT.sch)
-    (date "Tue 03 Mar 2020 01:43:18 PM CET")
+    (date "Tue 03 Mar 2020 11:26:33 PM CET")
     (tool "Eeschema 5.1.5-52549c5~84~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -453,6 +453,7 @@
       (tstamp 5E50F8CB))
     (comp (ref BT1)
       (value Battery)
+      (footprint HK-DT:2462)
       (datasheet ~)
       (libsource (lib Device) (part Battery) (description "Multiple-cell battery"))
       (sheetpath (names /) (tstamps /))

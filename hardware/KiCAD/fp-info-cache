@@ -1,4 +1,4 @@
-17214275968225669
+17217442578644669
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -48707,11 +48707,11 @@ Fuse Fuseholder TR5 Littelfuse/Wickmann No. 460 No560
 2
 HK-DT
 2462
-2462
-Undefined or Miscellaneous
+
+
 0
-4
-4
+2
+2
 HK-DT
 LPS3015
 LPS3015
@@ -48726,6 +48726,20 @@ MOLEX_105164-0001
 0
 11
 11
+HK-DT
+cow
+
+
+0
+0
+0
+HK-DT
+cow2
+
+
+0
+0
+0
 HK-DT
 ssd1306
 
